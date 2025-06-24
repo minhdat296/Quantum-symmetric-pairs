@@ -8,13 +8,21 @@
             $$\calU_q(\g_N)$$
         be the\footnote{By a Hochschild-cohomological argument this is known to be unique up to isomorphisms as a Hopf algebra deforming the universal enveloping algebra $\calU(\g_N)$.} quantisation of the standard Lie bialgebra structure on $\g_N$. \textit{A priori}, this quantisation is quasi-triangular, thus possessing a (constant) quantum R-matrix:
             $$\bar{\calR}$$
-        that is a solution to the quantum Yang-Baxter equation (QYBE) \eqref{equation: additive_spectral_QYBE}; equivalently, by the uniqueness of quantisations of Lie bialgebra structures on finite-type Kac-Moody algebras, this is a solution of trigonometric type in the Belavin-Drinfeld classification. This quantum R-matrix is unique to the Hopf algebra $\calU_q(\g_N)$, for it is the Hochschild cohomological class representing this deformation of $\calU(\g_N)$, so we will instead write:
+        that is a \textit{constant} solution to the quantum Yang-Baxter equation (QYBE)
+            \begin{equation} \label{equation: constant_QYBE}
+                \calR_{1, 2} \calR_{1, 3} \calR_{2, 3} = \calR_{2, 3} \calR_{1, 3} \calR_{1, 2}
+            \end{equation}
+        Equivalently, by the uniqueness of quantisations of Lie bialgebra structures on finite-type Kac-Moody algebras, this is a solution of trigonometric type in the Belavin-Drinfeld classification. This quantum R-matrix is unique to the Hopf algebra $\calU_q(\g_N)$, for it is the Hochschild cohomological class representing this deformation of $\calU(\g_N)$, so we will instead write:
             $$\calU_q(\bar{\calR})$$
         instead of $\calU_q(\g_N)$ in order to put emphasis on the role of the R-matrix. More generally, if $\calr$ is a solution to the classical Yang-Baxter equation (CYBE) \eqref{equation: CYBE} and $\calR \equiv \calr \pmod{\hbar}$ is a solution to the QYBE \eqref{equation: additive_spectral_QYBE} quantising $\calr$, then the corresponding quasi-triangular Hopf algebra obtained via the formalism of Faddeev-Reshetikhin-Takhtajan will be denoted by $\calU_q(\calR)$; this construction is well-known when $\calR$ is a solution to the QYBE with spectral parameter, and for the constant case, see \cite{gautam_rupert_wendlandt_R_matrix_presentation_for_finite_QUEs}).
     
         Next, suppose that $\sfX$ is a connected Dynkin diagram of affine type, of either an untwisted or twisted type, and let:
-            $$\calR := \calR(u, v)$$
-        be the corresponding universal R-matrix of the quantum Kac-Moody algebra $\calU_q(\sfX)$ (obtained via either the Chevalley-Serre presentation or the Drinfeld current presentation); technically speaking, this depends on the parameter $q$ as well as the Dynkin diagram $\sfX$ (or equivalently, its associated Kac-Moody algebra), but we omit these from the notation to avoid notational cluttering. We remind the reader that $\calR$ is a solution to the spectral QYBE equation \eqref{equation: additive_spectral_QYBE}, and moreover, it is a Baxterisation of the finite-type R-matrix $\bar{\calR}$ from before.
+            $$\calR := \calR(w, z)$$
+        be the corresponding universal R-matrix of the quantum Kac-Moody algebra $\calU_q(\sfX)$ (obtained via either the Chevalley-Serre presentation or the Drinfeld current presentation); technically speaking, this depends on the parameter $q$ as well as the Dynkin diagram $\sfX$ (or equivalently, its associated Kac-Moody algebra), but we omit these from the notation to avoid notational cluttering. We remind the reader that $\calR$ is a solution to the spectral QYBE, best written here in its multiplicative form:
+            \begin{equation} \label{equation: constant_QYBE}
+                \calR_{1, 2}\left(\frac{w}{z}\right) \calR_{1, 3}(w) \calR_{2, 3}(z) = \calR_{2, 3}(z) \calR_{1, 3}(w) \calR_{1, 2}\left(\frac{w}{z}\right)
+            \end{equation}
+        (one obtains the equation above by making the change of variables $w := \exp(u)$ and $z := \exp(v)$ to \eqref{equation: additive_spectral_QYBE}). Moreover, it is a Baxterisation of the finite-type R-matrix $\bar{\calR}$ from before.
 
         Now, even though $\calU_q(\calR) := \calU_q(\sfX)$ is unique up to isomorphisms as a quantisation\footnote{In the sense of \cite{etingof_kazhdan_quantisation_1} and its sequels.} of the Kac-Moody algebra corresponding to $\sfX$, the QYBE solution $\calR$ thereof is only unique as a cohomological representative. Therefore, we 
 
@@ -27,16 +35,15 @@
                 $$L^{\pm}(u) \in \Mat_N( \calU_q^{\ext}(\Loop\g_N, \calR)[\![u^{-1}]\!] )$$
             which are subjected to the following relations:
                 \todo[inline]{Upper/lower triangularity}
+                $$L_{i, j}^-[0] = L_{j, i}^+[0] = 0, \quad 1 \leq i < j \leq N$$
+                $$L_{i, i}^-[0] L_{i, i}^+[0] = L_{i, i}^+[0] L_{i, i}^-[0] = 1, \quad 1 \leq i \leq N$$
                 $$
-                    \forall 1 \leq i < j \leq N:
                     \begin{cases}
-                        L_{i, j}^-[0] = L_{j, i}^+[0] = 0
+                        \calR\left(\frac{w}{z}\right) L_1^{\pm}(w) L_2^{\pm}(z) = L_2^{\pm}(z) L_1^{\pm}(w) \calR\left(\frac{w}{z}\right)
                         \\
-                        L_{i, i}^-[0] L_{i, i}^+[0] = L_{i, i}^+[0] L_{i, i}^-[0] = 1
+                        \calR\left(\frac{w}{z}\right) L_1^+(z) L_2^-(w) = L_2^-(z) L_1^+(w) \calR\left(\frac{w}{z}\right)
                     \end{cases}
                 $$
-                $$\calR(u, v) L_1^{\pm}(u) L_2^{\pm}(v) = L_2^{\pm}(v) L_1^{\pm}(u) \calR(u, v)$$
-                $$\calR(u, v) L_1^+(u) L_2^-(v) = L_2^-(v) L_1^+(u) \calR(u, v)$$
         \end{definition}
 
         \todo[inline]{Hopf structure on $\calU_q^{\ext}(\Loop^{\sigma}\g_N, \calR)$}
@@ -44,8 +51,11 @@
         \todo[inline]{Bi-ideal structure on the centre $\calZ_q^{\ext}(\Loop^{\sigma}\g_N, \calR) \subset \calU_q^{\ext}(\Loop^{\sigma}\g_N, \calR)$.}
 
         \begin{definition}[Quantum loop algebras] \label{def: quantum_loop_algebras}
-            The \textbf{quantum loop algebra} associated to $\calR$ is the Hopf algebra:
+            The \textbf{quantum loop algebra} associated to $\calR$ is the associative:
                 $$\calU_q(\Loop^{\sigma}\g_N, \calR) := \calU_q^{\ext}(\Loop^{\sigma}\g_N, \calR)/\calZ_q(\Loop^{\sigma}\g_N, \calR)$$
         \end{definition}
+        \begin{remark}
+            $\calU_q(\Loop^{\sigma}\g_N, \calR)$ has a natural Hopf algebra structure inherited from $\calU_q^{\ext}(\Loop^{\sigma}\g_N, \calR)$, and this is because we now know that $\calZ_q(\Loop^{\sigma}\g_N, \calR) \subset \calU_q^{\ext}(\Loop^{\sigma}\g_N, \calR)$ has the structure of a bi-ideal.
+        \end{remark}
 
     \subsection{PBW bases}

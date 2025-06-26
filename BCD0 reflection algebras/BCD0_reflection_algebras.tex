@@ -55,7 +55,7 @@
             actually lie inside the subalgebra $\calX^{\tw}(\g_N, \id)[\![u^{-1}]\!] \subset \calX(\g_N)[\![u^{-1}]\!]$ ?
         \end{question}
     
-        Homomorphisms map generators to generators, so let us first of all consider if and how the expression for $\Phi( B(u) )$ as above differs from that for the transfer matrix $S(u)$, whose entries generate $\calX^{\tw}(\g_N, \id)$. To this end, recall from definition \ref{def: (extended)_twisted_yangians} that:
+        Homomorphisms map generators to generators, so let us first of all consider if and how the expression for $\Phi( B(u) )$ as above differs from that for the monodromy matrix $S(u)$, whose entries generate $\calX^{\tw}(\g_N, \id)$. To this end, recall from definition \ref{def: (extended)_twisted_yangians} that:
             $$S(u) = T\left(u - \frac12 \kappa\right) T\left(-u + \frac12 \kappa\right)^t$$
         Indeed, this is different from the expression for $\Phi(B(u))$ from proposition \ref{prop: mapping_IMO_reflection_algebras_to_extended_yangians}, so one way for an algebra homomorphism $\Phi^{\tw}$ as in diagram \eqref{diagram: mapping_IMO_reflection_algebras_to_extended_twisted_yangians} to exist is for there to be an algebra automorphism $\beta^{\tw} \in \Aut_{\Assoc\Alg}( \calX^{\tw}(\g_N, \id)[\![u^{-1}]\!] )$ such that the equation $(\beta^{\tw} \circ \Phi)( B(u) ) = S(u)$ holds in $\Mat_N(\calX^{\tw}(\g_N, \id)[\![u^{-1}]\!])$. For this to hold, though, one must already have that $\im \Phi \subset \calX^{\tw}( \g_N, \id )[\![u^{-1}]\!]$, which is the very thing we are trying to verify, so instead, let us instead search for an algebra automorphism:
             $$\beta \in \Aut_{\Assoc\Alg}( \calX(\g_N)[\![u^{-1}]\!] )$$
@@ -78,7 +78,7 @@
                 \end{equation}
         \end{question}
         
-        A natural case to consider is when $\beta$ is the inner automorphism defined on the transfer matrix $T(u) \in \Mat_N( \calX(\g_N)[\![u^{-1}]\!] )$ by:
+        A natural case to consider is when $\beta$ is the inner automorphism defined on the monodromy matrix $T(u) \in \Mat_N( \calX(\g_N)[\![u^{-1}]\!] )$ by:
             $$\beta( T(u) ) := b(u) \cdot T(u)$$
         for some invertible central scalar series:
             $$b(u) \in \calZ(\g_N)[\![u^{-1}]\!]^{\x}$$
@@ -365,7 +365,7 @@
             \end{equation}
         wherein the unlabelled arrow is the canonical quotient map, is an isomorphism of algebras. 
 
-        Now, in the process of proving \cite[Theorem 4.1]{guay_regelskis_twisted_yangians_for_symmetric_pairs_of_types_BCD}, the authors proved Lemma 4.3, which states that the boundary transfer matrices $S(u) \in \Mat_N( \calX^{\tw}(\g_N, \id)[\![u^{-1}]\!] )$ satisfy the symmetry relation \eqref{equation: symmetry_relation}. This leads us to make the following claim.
+        Now, in the process of proving \cite[Theorem 4.1]{guay_regelskis_twisted_yangians_for_symmetric_pairs_of_types_BCD}, the authors proved Lemma 4.3, which states that the boundary monodromy matrices $S(u) \in \Mat_N( \calX^{\tw}(\g_N, \id)[\![u^{-1}]\!] )$ satisfy the symmetry relation \eqref{equation: symmetry_relation}. This leads us to make the following claim.
         \begin{theorem} \label{theorem: IMO_reflection_algebras_vs_BCD0_twisted_yangians}
             The algebra homomorphism $\Phi^{\tw}$ from proposition \ref{prop: mapping_IMO_reflection_algebras_to_extended_untwisted_yangians_via_extended_twisted_yangians} fits into the following commutative diagram:
                 $$

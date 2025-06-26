@@ -71,7 +71,7 @@
             \begin{equation} \label{equation: RTT_relation}
                 \calR(u - v) T_1(u) T_2(v) = T_2(v) T_1(u) \calR(u - v)
             \end{equation}
-        obtaining the so-called \textbf{transfer matrix}.
+        obtaining the so-called \textbf{monodromy matrix}.
             $$T(u) \in \Mat_N( \calY(\g_N) )[\![u^{-1}]\!]$$
     
         Following \cite[Definition 2.1]{guay_regelskis_twisted_yangians_for_symmetric_pairs_of_types_BCD}, we work with the following definition of extended untwisted Yangians associated to a rational solution $\calR(u)$ to the QYBE on $\calV_N^{\tensor 3}$.
@@ -118,7 +118,7 @@
             \end{proof}
 
         \begin{lemma}[Quantum contractions] \label{lemma: quantum_contractions}
-            The transfer matrix:
+            The monodromy matrix:
                 $$T(u) \in \Mat_N( \calX(\g_N) )[\![u^{-1}]\!]$$
             satisfies the \textbf{quantum contraction} formula:
                 \begin{equation} \label{equation: quantum_contraction}
@@ -160,11 +160,11 @@
                 \end{equation}
         \end{definition}
     
-        \begin{definition}[Boundary transfer matrices] \label{def: boundary_transfer_matrices}
+        \begin{definition}[Boundary monodromy matrices] \label{def: boundary_monodromy_matrices}
             
         \end{definition}
         \begin{lemma}[Reflection equations] \label{lemma: reflection_equations}
-            The boundary transfer matrix $S(u)$ as in definition \ref{def: boundary_transfer_matrices} satisfy the following so-called \textbf{reflection equation}\footnote{Also called the quaternary relation, especially in the context of twisted Yangians. See e.g. \cite[Proposition 2.2.1]{molev_yangians_and_classical_lie_algebras}.}:
+            The boundary monodromy matrix $S(u)$ as in definition \ref{def: boundary_monodromy_matrices} satisfy the following so-called \textbf{reflection equation}\footnote{Also called the quaternary relation, especially in the context of twisted Yangians. See e.g. \cite[Proposition 2.2.1]{molev_yangians_and_classical_lie_algebras}.}:
                 \begin{equation} \label{equation: reflection_equations}
                     \calR_{1, 2}(u - v) S_1(u) \calR_{1, 2}(u + v) S_2(v) = S_2(v) \calR_{1, 2}(u + v) S_1(u) \calR_{1, 2}(u - v) 
                 \end{equation}
@@ -178,7 +178,7 @@
         \end{definition}
 
         \begin{lemma}[Twisted quantum contractions] \label{lemma: twisted_quantum_contractions}
-            The boundary transfer matrix:
+            The boundary monodromy matrix:
                 $$S(u) \in \Mat_N( \calX^{\tw}(\g_N, \vartheta) )[\![u^{-1}]\!]$$
             satisfies the following so-called \textbf{twisted quantum contraction} formula:
                 \begin{equation} \label{equation: twisted_quantum_contraction}
